@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="1dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/textbg">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="0dp"
+                android:layout_marginTop="150dp"
+                android:layout_marginRight="0dp"
+                android:layout_marginBottom="10dp"
+                android:onClick="selectImage"
+                app:srcCompat="@drawable/selectimage" />
+
+            <EditText
+                android:id="@+id/aniBasligiEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:gravity="center"
+                android:hint="Lütfen Anı Başlığı Girin"
+                android:inputType="textPersonName"
+                android:background="@drawable/baslikbg"
+                android:textSize="24sp" />
+
+            <EditText
+                android:id="@+id/aniEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:ems="10"
+                android:gravity="start|top"
+                android:background="@drawable/koseleryuvarlak"
+                android:hint="Bu özel anınızla ilgili buraya birşeyler yazmak istermisin?"
+                android:inputType="textMultiLine"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/saveButton"
+                android:layout_width="148dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/butonbg"
+                android:onClick="Save"
+                android:text="Kaydet" />
+
+            <Button
+                android:id="@+id/deleteButton"
+                android:layout_width="70dp"
+                android:layout_height="38dp"
+                android:layout_marginTop="25dp"
+                android:background="@drawable/silbg"
+                android:onClick="delete"
+                android:text="Sil"
+                android:textAllCaps="false"
+                android:textColor="#FFF" />
+
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
